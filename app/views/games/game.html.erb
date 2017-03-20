@@ -1,0 +1,18 @@
+<div id="container text-center">
+  <div class="row">
+    <div class="col-md-12 text-center" style="padding: 50px">
+     <h1>Games#game</h1>
+
+     <h2><%= @grid.join() %></h2>
+
+     <form action="/score">
+      <label for="question">What's your best shot ?</label>
+      <input type="text" id="question" name="attempt" placeholder="Insert your best shot here">
+      <input type="submit" class="btn btn-primary" value="Submit!">
+      <input type="hidden" name="grid" value=<%= @grid.join(',') %>>
+      <input type="hidden" name="starttime" value=<%= Time.now %>>
+    </form>
+  </div>
+</div>
+</div>
+
